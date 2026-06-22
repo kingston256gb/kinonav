@@ -4,8 +4,8 @@
     "description": "Платформа для выбора кино на просмотр с умным рандомайзером, топами, популярными фильмами и поиском по ключевым словам",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#252525",
-    "theme_color": "#259dff",
+    "background-color": "#252525",
+    "theme-color": "#259dff",
     "icons": [
         {
             "src": "assets/icons/icon_192.png",
@@ -16,6 +16,20 @@
             "src": "assets/icons/icon_512.png",
             "sizes": "512x512",
             "type": "image/png"
+        }
+    ],
+    "screenshoots": [
+        {
+            "src": "assets/imgs/screenshoot_wade.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide"
+        }, 
+        {
+            "src": "assets/imgs/screenshoot_mobile.png",
+            "sizes": "720x1280",
+            "type": "image/png",
+            "form_factor": "narrow"
         }
     ]
 }
