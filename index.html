@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Кинонав - рандомайзер</title>
+
+
+    <meta name="description" content="Кинонав - навигатор в мире кино. Выбор фильма на вечер с помощью умного рандомайзера, популярные фильмы и топ культового кино - все это доступно в одном удобном месте!">
+    <meta name="keywords" content="кино, фильмы, сериалы, ТВ, ТВ-шоу, шоу, популярное, рандом, рандомайзер, что посмотреть, топ, топ 10, топ 100, топ 250, рейтинги">
+
+    <meta property="og:title" content="Кинонав - твой навигатор в мире кино!">
+    <meta property="og:description" content="Выбери себе кино для просмотра с помощью умного рандомайзера, посмотри что сейчас в тренде или взгляни на мировой рейтинг культового кино!">
+    <meta property="og:image" content="assets/icons/url_preview.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/kingston256gb/kinonav">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#259dff">
+
+
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+</head>
+<body>
+    <header>
+        <div class="container header">
+            <a class="logo-container" href="index.html">
+                <img class="logo" id="logo" src="assets/imgs/logo_light.png" alt="Логотип сайта Кинонав">
+            </a>
+            <nav class="website-main-nav">
+                <a class="nav-element" href="top.html">Навигатор</a> 
+                <a class="nav-element" href="#random">Рандомайзер</a>
+                <a class="nav-element" href="about.html">О сайте</a>
+            </nav>
+            <section class="settings">
+                <button class="change-theme_btn btn">🌙</button>
+                <button class="burger-btn btn" id="burgerBtn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </section>
+
+            <nav class="website-mobile-nav" id="mobile">
+                <a class="nav-element" href="top.html">Навигатор</a> 
+                <a class="nav-element" href="#random">Рандомайзер</a>
+                <a class="nav-element" href="about.html">О сайте</a>
+            </nav>
+        </div> 
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Блок рандомайзера -->
+            <section class="randomizer-section" id="random">
+                <div class="randomizer-content">
+                    <div class="randomizer-text">
+                        <h2 class="randomizer-title">🎲 Рандомайзер фильмов</h2>
+                        <p class="randomizer-description">
+                            Не знаешь, что посмотреть вечером? Нажми на кнопку — и мы случайным образом выберем фильм или сериал 
+                            специально для тебя. Ты можешь настроить жанр, год выпуска, рейтинг и тип контента. Или вгляни что сейчас в тренде, 
+                            пролистав немного ниже :)
+                        </p>
+                        <ul class="randomizer-features">
+                            <li>🎬 Более 1 млн фильмов и сериалов</li>
+                            <li>⭐ Фильтрация по рейтингу Кинопоиска</li>
+                            <li>🎭 Выбор любого жанра</li>
+                            <li>📅 Диапазон годов от 1000 до 2026</li>
+                        </ul>
+                    </div>
+                    <div class="randomizer-action">
+                        <button class="randomize-btn" id="randomizeBtn">
+                            <span class="btn-text">Найти фильм</span>
+                            <span class="btn-icon">🎬</span>
+                        </button>
+                        <p class="randomizer-hint">Нажми на кнопку, и удача сама выберет за тебя!</p>
+                    </div>
+                </div>
+            </section>
+        
+
+            <!-- История выпадений -->
+            <section class="history-section">
+                <h2 class="section-title">⏰ История выпадений</h2>
+                <div class="history-btns">
+                    <button class="btn history-clear history-btn">Очистить историю</button>
+                </div>
+                <div id="history">
+                    <article class="history-card">
+                        <img class="history-poster" src="https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/36cae7bb-1e39-4a8d-99b7-321d2bafd9a7/360" alt="">
+                        <h3 class="history-name">Название фильма</h3>
+                        <div class="history-data">
+                            <span>🗓️ 2026</span>
+                            <span>⭐ 9</span>
+                        </div>
+                        <a class="btn history-film-btn" href="movie.html?id=">Подробнее</a>
+                    </article>
+                </div>
+            </section>
+
+                <!-- Секция с популярными фильмами / трендами -->
+            <section class="popular-section" id="popular">
+                <h2 class="section-title">📽️ Популярное кино</h2>
+                <!-- Заполнится автоматически (JS) -->
+                <div class="popular-flex" id="popularFilms">
+                    <article class="popular-card">
+                        <img class="popular-film-poster-img" src="https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/36cae7bb-1e39-4a8d-99b7-321d2bafd9a7/360" alt="">
+                        <h3 class="popular-film-name">Название фильма</h3>
+                        <div class="popular-film-info">
+                            <span class="rating">9.3</span>
+                            <span class="type">Фильм</span> 
+                            <span class="year">2026</span>
+                        </div>
+                        <p class="short-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, nemo!</p>
+                        <button class="btn popular-film-btn" film-id="12121">Подробнее</button>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Модальное окно с фильтрами (появляется после нажатия кнопки) -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal-close btn">х</button>
+            <h3 class="modal-title">🎲 Выбор рандомного фильма</h3>
+            <form class="filters-form" id="filtersForm">
+                <div class="filter-group">
+                    <label>Выберите жанр 🎭</label>
+                    <select id="genres" class="genre-filter"></select>
+                </div>
+                <div class="filter-group">
+                    <label>Выберите год 🗓️</label>
+                    <input type="number" id="min-year" placeholder="От" min="1000" max="2026">
+                    <input type="number" id="max-year" placeholder="До" min="1000" max="2026">
+                </div>
+                <div class="filter-group">
+                    <label>Выберите рейтинг ⭐</label>
+                    <select class="rating-filter">
+                        <option value="0">любой</option>
+                        <option value="1">⭐ 1+</option>
+                        <option value="2">⭐ 2+</option>
+                        <option value="3">⭐ 3+</option>
+                        <option value="4">⭐ 4+</option>
+                        <option value="5">⭐ 5+</option>
+                        <option value="6">⭐ 6+</option>
+                        <option value="7">⭐ 7+</option>
+                        <option value="8">⭐ 8+</option>
+                        <option value="9">⭐ 9+</option>
+                        <option value="10">⭐ 10</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Выберите тип</label>
+                    <select class="type-filter">
+                        <option value="ALL">все</option>
+                        <option value="FILM">фильм</option>
+                        <option value="TV_SERIES">сериал</option>
+                        <option value="MINI_SERIES">мини-сериал</option>
+                        <option value="TV_SHOW">ТВ-шоу</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-filters btn">Готово!</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно с гифкой -->
+    <div class="dice-modal">
+        <div class="dice-modal-inner">
+            <h2 class="modal-title gif-title">🎲 Выбираем подходящее тебе кино... </h2>
+            <img class="dice-gif" src="" alt="Гиф подбрасывания кубика">
+        </div>
+    </div>
+
+    <!-- Модальное окно с результатом (выбранный фильм) -->
+    <div class="result-modal" id="resultModal">
+        <div class="result-card">
+            <button class="close-result btn">х</button>
+            <img src="https://kinopoiskapiunofficial.tech/images/posters/kp/8420095.jpg" class="movie-poster">
+            <div class="movie-meta">
+                <div class="movie-main-info">
+                    <h2 class="movie-title">Название фильма</h2>
+                    <div class="movie-info">
+                        <span class="movie-year">
+                            <span class="emoji">🗓️</span>
+                            <span class="year-value">2026</span>
+                        </span>
+                        <span class="dot">•</span>
+                        <span class="movie-genre">
+                            <span class="emoji">🎭</span>
+                            <span class="genre-value">триллер, драмма</span>
+                        </span>
+                        <span class="dot">•</span>
+                        <span class="movie-rating">
+                            <span class="emoji">⭐</span>
+                            <span class="rating-value">9.3</span>
+                        </span>
+                    </div>
+                </div>
+                
+                <span class="movie-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, sit?</span>
+                <div class="movie-btnc">
+                    <a class="info-btn btn" href="">🔍 Подробнее</A>
+                    <button class="again-btn btn" film-id="1212121">🎲 Попробовать ещё</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer">
+            <section class="left">
+                <img class="logo" id="logo" src="assets/imgs/logo_light.png" alt="">
+                <a class="link footer-link" href="#">Политика конфиденциальности</a>
+            </section>
+            <section class="center">
+                <p>Отдельное огромное спасибо моим наставникам из «Код Будущего» и НИ ТГУ — вы не просто учили, вы вдохновляли ❤️</p>
+                <div class="footer-logos">
+                    <img class="logo" src="assets/imgs/futureCode.png" alt="Логотип проекта Код Будущего">
+                    <img class="logo" src="assets/imgs/tgu.png" alt="Логотип НИ ТГУ">
+                </div>
+            </section>
+            <section class="right">
+                <a class="link footer-link" href="#">info@kinonav.com</a>
+                <a class="link footer-link" href="#">+7 (999)-123-45-67</a>
+                <div class="footer-logos">
+                    <a class="btn link-btn" href="https://github.com/kingston256gb">
+                        <img class="btn-img" src="assets/imgs/github.png" alt="Логотип Гитхаба">
+                    </a>
+                    <a class="btn link-btn" href="https://vk.com">
+                        <img class="btn-img" src="assets/imgs/VK.png" alt="Логотип Гитхаба">
+                    </a>
+                    <a class="btn link-btn" href="https://t.me">
+                        <img class="btn-img" src="assets/imgs/Telegram.png" alt="Логотип Гитхаба">
+                    </a>
+                </div>
+                <a class="link footer-link" href="#">© 2026 Кинонав. <br>Все права защищены</a>
+            </section>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

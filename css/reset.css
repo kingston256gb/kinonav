@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.25s;
+    cursor: default;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul, ol{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+input, button, select{
+    color: inherit;
+    background: inherit;
+    cursor: pointer;
+}
+input{
+    cursor: text;
+}
+
+main {
+    min-width: 0;
+}
+
+.container {
+    min-width: 0;
+}
+
+.popular-section {
+    min-width: 0;
+}

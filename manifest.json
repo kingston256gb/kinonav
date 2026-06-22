@@ -1,0 +1,21 @@
+{
+    "name": "Кинонав",
+    "short-name": "Кино",
+    "description": "Платформа для выбора кино на просмотр с умным рандомайзером, топами, популярными фильмами и поиском по ключевым словам",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background-color": "#252525",
+    "theme-color": "#259dff",
+    "icons": [
+        {
+            "src": "assets/icons/icon_192.png",
+            "size": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/icons/icon_512.png",
+            "size": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

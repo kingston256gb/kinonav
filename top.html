@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинонав - Навигатор</title>
+
+    <meta name="description" content="Кинонав - страница навигатора: топы культового кино и поиск по ключевым словам на базе фильмов, сериалов и шоу Кинопоиска!">
+    <meta name="keywords" content="кино, фильмы, сериалы, ТВ, ТВ-шоу, шоу, популярное, рандом, рандомайзер, что посмотреть, топ, топ 10, топ 100, топ 250, рейтинги">
+
+    <meta property="og:title" content="Кинонав - Навигатор: топ и поиск">
+    <meta property="og:description" content="Хочешь узнать подробнее о каком-то из фильмов, сериалов или ТВ-шоу? Интересно взглянуть на мировой топ культового кино? Тогда это именно то, что ты ищешь!">
+    <meta property="og:image" content="assets/icons/url_preview.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/kingston256gb/kinonav">    
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#259dff">
+
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+</head>
+<body>
+    <header>
+        <div class="container header">
+            <a class="logo-container" href="index.html">
+                <img class="logo" id="logo" src="assets/imgs/logo_light.png" alt="Логотип сайта Кинонав">
+            </a>
+            <nav class="website-main-nav">
+                <a class="nav-element" href="#">Навигатор</a> 
+                <a class="nav-element" href="index.html">Рандомайзер</a>
+                <a class="nav-element" href="about.html">О сайте</a>
+            </nav>
+            <section class="settings">
+                <button class="change-theme_btn btn">🌙</button>
+                <button class="burger-btn btn" id="burgerBtn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </section>
+
+            <nav class="website-mobile-nav" id="mobile">
+                <a class="nav-element" href="#">Навигатор</a> 
+                <a class="nav-element" href="index.html">Рандомайзер</a>
+                <a class="nav-element" href="about.html">О сайте</a>
+            </nav>
+        </div> 
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero-section">
+                <h1 class="hero-title">🗺️ Навигатор</h1>
+               
+            </section>
+
+            <!-- ПОИСК -->
+            <section class="search-section">
+                <input class="search-line" id="search" type="text" placeholder="Найти фильм...">
+                <button class="btn search-btn">🔍</button>
+            </section>
+            
+            <!-- ТОП -->
+            <section class="top-section" id="top">
+                <h2 class="section-title">📊 Топовое кино</h2>
+                <div class="top-select">
+                    <button id="top-btn" data-top="10" class="active">ТОП-10</button>
+                    <button id="top-btn" data-top="100">ТОП-100</button>
+                    <button id="top-btn" data-top="250">ТОП-250</button>
+                </div>
+                <div class="top-inner">
+                    <div class="top-pagination">
+                        <button id="previous" class="btn previous"><</button>
+                        <span><span id="currPage">1</span> / <span id="maxPage">10</span></span>
+                        <button id="next" class="btn next">></button>
+                    </div>
+                    <div id="top-container">
+                        <a class="top-card btn" href="movie.html?id=">
+                            <img class="top-card_poster" src="https://kinopoiskapiunofficial.tech/images/posters/kp/258687.jpg">
+                            <h3 class="top-card_name">Интерстеллар</h3>
+                            <div class="top-card_data">
+                                <span>🗓️ 2014</span>
+                                <span>⭐ 8.7</span>
+                            </div>
+                            <span class="top-card_place" data-place="1">1</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+     <div class="search-modal">
+        <div class="search-modal_inner">
+            <h2 class="section-title">🔍 Результаты поиска <span id="result-length">0</span></h2>
+            <div id="searchResults">
+                <article class="search-result_card">
+                    <img class="seaerch-result_card-poster" src="https://kinopoiskapiunofficial.tech/images/posters/kp/258687.jpg">
+                    <h3 class="seaerch-result_card-name">Интерстеллар</h3>
+                    <a class="seaerch-result_card-btn btn" href="movie.html?id=">Подробнее</a>
+                </article>
+            </div>
+        </div>
+     </div>
+
+    <footer>
+        <div class="container footer">
+            <section class="left">
+                <img class="logo" id="logo" src="assets/imgs/logo_light.png" alt="">
+                <a class="link footer-link" href="#">Политика конфиденциальности</a>
+            </section>
+            <section class="center">
+                <p>Отдельное огромное спасибо моим наставникам из «Код Будущего» и НИ ТГУ — вы не просто учили, вы вдохновляли ❤️</p>
+                <div class="footer-logos">
+                    <img class="logo" src="assets/imgs/futureCode.png" alt="Логотип проекта Код Будущего">
+                    <img class="logo" src="assets/imgs/tgu.png" alt="Логотип НИ ТГУ">
+                </div>
+            </section>
+            <section class="right">
+                <a class="link footer-link" href="#">info@kinonav.com</a>
+                <a class="link footer-link" href="#">+7 (999)-123-45-67</a>
+                <div class="footer-logos">
+                    <a class="btn link-btn" href="https://github.com/kingston256gb">
+                        <img class="btn-img" src="assets/imgs/github.png" alt="Логотип Гитхаба">
+                    </a>
+                    <a class="btn link-btn" href="https://vk.com">
+                        <img class="btn-img" src="assets/imgs/VK.png" alt="Логотип Гитхаба">
+                    </a>
+                    <a class="btn link-btn" href="https://t.me">
+                        <img class="btn-img" src="assets/imgs/Telegram.png" alt="Логотип Гитхаба">
+                    </a>
+                </div>
+                <a class="link footer-link" href="#">© 2026 Кинонав. <br>Все права защищены</a>
+            </section>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/top.js"></script>
+</body>
+</html>

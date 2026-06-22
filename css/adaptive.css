@@ -1,0 +1,345 @@
+@media (max-width: 920px){
+    #top-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .search-modal_inner{
+        width: 700px;
+    }
+    .seaerch-result_card-poster{
+        width: 170px;
+    }
+}
+
+@media (max-width: 768px) {
+    .randomizer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .result-card{
+        width: auto; 
+        height: auto;
+        max-height: calc(100vh - 40px);
+        gap: 0;
+    }
+
+    .randomizer-features {
+        justify-content: center;
+    }
+    
+    .randomizer-section {
+        padding: 25px;
+    }
+    
+    .randomizer-title {
+        font-size: 26px;
+    }
+    
+    .logo{
+        height: 50px;
+    }
+    .footer{
+        font-size: 15px;
+    }
+    .popular-flex {
+        gap: 15px;
+    }
+    
+    .popular-card {
+        width: 180px;
+    }
+    
+    .popular-film-poster-img {
+        height: 220px;
+    }
+    
+    .dot{
+        display: none;
+    }
+    .emoji{
+        display: none;
+    }
+    .dice-modal-inner {
+        padding: 25px;
+    }
+
+    .this-movie-name{
+        font-size: 30px;
+    }
+    .this-movie-poster{
+        height: 300px;
+    }
+    .base-info{
+        font-size: 16px;
+        margin-top: 0;
+        gap: 5px;
+    }
+    .info-row{
+        font-size: 16px;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+    .left{
+        align-items: center;
+        justify-content: start;
+    }
+    .right{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-logos{
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .right .footer-logos{
+        justify-content: center;
+    }
+    .hero-title{
+        font-size: 45px;
+    }
+    .hero-slogan{
+        font-size: 18px;
+    }
+    .fb-btn{
+        font-size: 15px;
+    }
+    .fb-img{
+        width: 80px;
+        height: 80px;
+        font-size: 50px;
+    }
+    .thanks-card{
+        flex-direction: column;
+    }
+    .thanks-card_img{
+        width: 100%;
+        height: auto;
+    }
+    .thanks-end{
+        font-size: 50px;
+    }
+    .top-card_name{
+        font-size: 18px;
+    }
+    .top-card_place{
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+    .top-card_rating{
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .decoration{
+        left: 0px;
+        top: 24px;
+    } 
+    #top-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .search-modal_inner{
+        width: calc(100% - 40px);
+    }
+    #result-length{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px){
+    .website-main-nav{
+        display: none;
+    }
+    .burger-btn{
+        display: flex;
+    }
+    .footer{
+        font-size: 14px;
+    }
+     .popular-flex {
+        gap: 12px;
+        padding: 0 10px 10px 0;
+    }
+    
+    .popular-card {
+        width: 170px;
+    }
+    
+    .popular-film-poster-img {
+        height: 180px;
+    }
+    
+    .popular-film-name {
+        font-size: 15px;
+    }
+    
+    .popular-film-info {
+        font-size: 12px;
+    }
+    .short-desc{
+        font-size: 14px;
+    }
+    .section-title{
+        font-size: 26px;
+        text-align: center;
+    }
+    
+    .result-card{
+        width: auto; 
+        height: auto;
+        max-height: calc(100vh - 40px);
+        gap: 0;
+    }
+    .movie-poster{
+        height: 100%;
+    }
+    .movie-title{
+        font-size: 24px;
+    }
+    .movie-info{
+        font-size: 12px;
+    }
+    .movie-description{
+        font-size: 14px;
+        font-family: 'Ubuntu';
+    }
+    .info-btn,
+    .again-btn{
+        padding: 5px;
+        font-size: 15px;
+    }
+    .footer-logos{
+        gap: 5px;
+    }
+    .footer-logos .logo{
+        width: 50px;
+        height: auto;
+    }
+    .footer-logos .link-btn{
+        width: 35px;
+        height: 35px;
+    }
+    .footer-link{
+        font-size: 13px;
+    }
+    .dice-modal-inner {
+        padding: 20px;
+        max-width: calc(100vw - 40px);
+    }
+    
+    .dice-modal .modal-title {
+        font-size: 22px;
+    }
+    
+    .dice-gif {
+        max-height: 280px;
+    }
+
+    .this-movie-name{
+        font-size: 24px;
+    }
+    .this-movie-poster{
+        height: 300px;
+    }
+    .point{
+        display: none;
+    }
+    .this-movie-poster{
+        height: 250px;
+    }
+    .info-row{
+        font-size: 14px;
+    }
+    .base-info{
+        gap: 2px;
+    }
+    .slogan{
+        font-size: 14px;
+    }
+    .footer{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .sect-title{
+        font-size: 25px;
+    }
+    .idea-text,
+    .feature-list li,
+    .fb-text{
+        font-size: 15px;
+    }
+    .tech-cards-list{
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scrollbar-width: thin;
+        padding-bottom: 10px;
+        scrollbar-color: var(--accent) var(--bg-secondary);
+    }
+    .tech-cards-list::-webkit-scrollbar-track{
+        background: var(--bg-secondary);
+        border-radius: var(--radius);
+    }
+    .tech-cards-list::-webkit-scrollbar-thumb{
+        background: var(--accent);
+    }
+    .fb-container{
+        gap: 10px;
+    }
+    .thanks-end{
+        font-size: 35px;
+    }
+    #top-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .top-card_name{
+        font-size: 16px;
+        padding: 0;
+        padding-bottom: 10px;
+    }
+    .top-card_data{
+        font-size: 12px;
+    }
+    .top-select button{
+        font-size: 15px;
+    }
+    .top-select button.active{
+        font-size: 18px;
+    }
+    .history-btns{
+        justify-content: center;
+    }
+    .history-btn{
+        width: 150px;
+        font-size: 16px;
+    }
+    .history-name{
+        font-size: 16px;
+    }
+    .history-data{
+        font-size: 13px;
+    }
+    .history-card{
+        width: 180px;
+        height: 350px;
+    }
+    .history-time{
+        font-size: 14px;
+    }
+    .history-poster{
+        height: 200px;
+    }
+    .hero-title{
+        font-size: 35px;
+    }
+    #searchResults{
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory; 
+    }
+}

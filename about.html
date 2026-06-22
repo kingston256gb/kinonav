@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинонав - о сайте</title>
+
+    <meta name="description" content="Кинонав - о платформе">
+    <meta name="keywords" content="кино, фильмы, сериалы, ТВ, ТВ-шоу, шоу, популярное, рандом, рандомайзер, что посмотреть, топ, топ 10, топ 100, топ 250, рейтинги, поддержка, оценка, о проекте, описание, био">
+
+    <meta property="og:title" content="Кинонав - О проекте">
+    <meta property="og:description" content="Страница, на которой подробно рассказано о сайте, кнопки обратной связи и специальные благодарности">
+    <meta property="og:image" content="assets/icons/url_preview.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/kingston256gb/kinonav">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#259dff">
+
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+</head>
+<body>
+    <header>
+        <div class="container header">
+            <a class="logo-container" href="index.html">
+                <img class="logo" id="logo" src="assets/imgs/logo_light.png" alt="Логотип сайта Кинонав">
+            </a>
+            <nav class="website-main-nav">
+                <a class="nav-element" href="top.html">Навигатор</a> 
+                <a class="nav-element" href="index.html">Рандомайзер</a>
+                <a class="nav-element" href="#">О сайте</a>
+            </nav>
+            <section class="settings">
+                <button class="change-theme_btn btn">🌙</button>
+                <button class="burger-btn btn" id="burgerBtn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </section>
+
+            <nav class="website-mobile-nav" id="mobile">
+                <a class="nav-element" href="top.html">Навигатор</a> 
+                <a class="nav-element" href="index.html">Рандомайзер</a>
+                <a class="nav-element" href="#">О сайте</a>
+            </nav>
+        </div> 
+    </header>
+
+
+    <main>
+        <div class="container">
+            <!-- HERO section -->
+             <section class="hero">
+                <h1 class="hero-title">🎬 О проекте "Кино<span class="accent">нав</span>"</h1>
+                <p class="hero-slogan">Кинонав - твой личный навигатор в мире кино</p>
+             </section>
+
+             <!-- Идея section -->
+             <section class="idea section ">
+                <h2 class="sect-title idea-title">💡 Идея проекта</h2>
+                <p class="section-text idea-text">
+                    <strong>Кинонав</strong> — веб-сервис, который помогает решить вечную проблему: <em>"Что бы посмотреть?"</em>.
+                    Здесь собрана огромная база фильмов, сериалов и ТВ-шоу, чтобы каждый мог найти идеальный вариант
+                    для просмотра этим вечером, не тратя часы на бесконечный скроллинг каталогов
+                </p>
+                <p class="section-text idea-text">
+                    Главная фишка сайта — <strong>рандомайзер</strong>, который случайным образом подберет для тебя кино,
+                    но с учетом твоих предпочтений. Быстро, просто, интересно
+                </p>
+             </section>
+
+             <!-- Возможности сайта section -->
+             <section class="feature section">
+                <h2 class="sect-title feature-title">⚡Что умеет Кинонав?</h2>
+                <ul class="feature-list">
+                    <li>🎲 <strong>Рандомайзер</strong> с фильтрацией по жанру, году и рейтингу</li>
+                    <li>🗺️ <strong>Навигатор</strong> для поиска фильмов и просмотра трендов</li>
+                    <li>📜 <strong>Страницы фильмов</strong> с полной информацией и актёрами</li>
+                    <li>🌒 <strong>Тёмная тема</strong>, которая запоминает твой выбор</li>
+                    <li>📱 <strong>Адаптив</strong> — удобно на любом устройстве</li>
+                </ul>
+             </section>
+
+             <!-- Технологии сайта section -->
+             <section class="tech section">
+                <h2 class="sect-title tech-title">🛠️ Техническая сторона сайта</h2>
+                <ul class="tech-cards-list">
+                    <li>
+                        <div class="card-emoji">✏️</div>
+                        <div class="card-title"><strong>HTML5</strong></div>
+                        <p class="card-text">современная семантическая вёрстка</p>
+                    </li>
+                    <li>
+                        <div class="card-emoji">🎨</div>
+                        <div class="card-title"><strong>CSS3</strong></div>
+                        <p class="card-text">адаптивный дизайн и кастомные свойства</p>
+                    </li>
+                    <li>
+                        <div class="card-emoji">⚡</div>
+                        <div class="card-title"><strong>JavaScript</strong></div>
+                        <p class="card-text">чистый код без фреймворков</p>
+                    </li>
+                    <li>
+                        <div class="card-emoji">🌐</div>
+                        <div class="card-title"><strong>Kinopoisk API</strong></div>
+                        <p class="card-text">готовая база фильмов и сериалов</p>
+                    </li>
+                    <li>
+                        <div class="card-emoji">📦</div>
+                        <div class="card-title"><strong>LocalStorage</strong></div>
+                        <p class="card-text">сохранение темы и настроек</p>
+                    </li>
+                    <li>
+                        <div class="card-emoji">📱</div>
+                        <div class="card-title"><strong>Адаптив</strong></div>
+                        <p class="card-text">корректно отображается на всех устройствах</p>
+                    </li>
+                </ul>
+             </section>
+
+             <!-- Обратная связь section -->
+             <section class="fb section">
+                <h2 class="sect-title fb-title">📫 Контактная информация</h2>
+                <p class="fb-text">Нашли баг? Хотите предложить свою идею? Оцените сайт? <br>
+                Напиши удобным способом!</p>
+                <div class="fb-container">
+                    <a href="https://github.com/kingston256gb" class="fb-btn btn" target="_blank">
+                        <img class="fb-img" src="assets/imgs/github.png">
+                        <span>GitHub аккаунт</span>
+                    </a>
+                    <a href="https://forms.yandex.ru/u/6a317bddeb614632a410f7a6" class="fb-btn btn" target="_blank">
+                        <span class="fb-img">💌</span>
+                        <span>Обратная связь</span>
+                    </a>
+                    <a href="https://forms.yandex.ru/u/6a317bddeb614632a410f7a6" class="fb-btn btn" target="_blank">
+                        <span class="fb-img">📧</span>
+                        <span>info@kinonav.com</span>
+                    </a>
+                    <a href="https://forms.yandex.ru/u/6a317bddeb614632a410f7a6" class="fb-btn btn" target="_blank">
+                        <span class="fb-img">📞</span>
+                        <span>+7 (999)-123-45-67</span>
+                    </a>
+                </div>
+                <p class="fb-note">
+                        📧 info@kinonav.com <br>
+                        📞 +7 (999)-123-45-67 <br>
+                        <strong>УЧЕБНЫЕ ЗАГЛУШКИ</strong> для обратной связи используйте форму
+                    </p>
+             </section>
+
+             <!-- Благодарность коду будущего 💘 section -->
+             <section class="thanks section">
+                <h2 class="sect-title thanks-title">💘 Отдельное спасибо</h2>
+                <div class="thanks-card">
+                    <img class="thanks-card_img" src="assets/imgs/futureCode.png">
+                    <div class="thanks-card_text-block">
+                         <p>
+                            Хочу сказать огромное спасибо проекту
+                            <a class="accent" href="https://www.gosuslugi.ru/futurecode" target="_blank">Код будущего</a> 
+                            за этот невероятный путь в мир IT!
+                        </p>
+                        <p>
+                            Занятия были выстроены идеально: теория сразу подкреплялась практикой, 
+                            а домашние задания помогали закрепить материал. Преподаватели и кураторы всегда были на связи 
+                            и помогали разобраться в сложных моментах. Вы доказали, что создание сайта не такое уж и сложное
+                            занятие, а скорее интересное и увлекательное
+                        </p>
+                        <p>
+                            Этот сайт — результат моей работы в рамках обучения. 
+                            И я безумно горжусь тем, что смог его создать ❤️
+                        </p>
+                    </div>
+                </div>
+                <div class="thanks-end">ОГРОМНОЕ СПАСИБО! 💘</div>
+             </section>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container footer">
+            <section class="left">
+                <img class="logo" id="logo" src="assets/imgs/logo_light.png" alt="">
+                <a class="link footer-link" href="#">Политика конфиденциальности</a>
+            </section>
+            <section class="center">
+                <p>Отдельное огромное спасибо моим наставникам из «Код Будущего» и НИ ТГУ — вы не просто учили, вы вдохновляли ❤️</p>
+                <div class="footer-logos">
+                    <img class="logo" src="assets/imgs/futureCode.png" alt="Логотип проекта Код Будущего">
+                    <img class="logo" src="assets/imgs/tgu.png" alt="Логотип НИ ТГУ">
+                </div>
+            </section>
+            <section class="right">
+                <a class="link footer-link" href="#">info@kinonav.com</a>
+                <a class="link footer-link" href="#">+7 (999)-123-45-67</a>
+                <div class="footer-logos">
+                    <a class="btn link-btn" href="https://github.com/kingston256gb">
+                        <img class="btn-img" src="assets/imgs/github.png" alt="Логотип Гитхаба">
+                    </a>
+                    <a class="btn link-btn" href="https://vk.com">
+                        <img class="btn-img" src="assets/imgs/VK.png" alt="Логотип Гитхаба">
+                    </a>
+                    <a class="btn link-btn" href="https://t.me">
+                        <img class="btn-img" src="assets/imgs/Telegram.png" alt="Логотип Гитхаба">
+                    </a>
+                </div>
+                <a class="link footer-link" href="#">© 2026 Кинонав. <br>Все права защищены</a>
+            </section>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+</body>
+</html>

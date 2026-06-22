@@ -1,0 +1,60 @@
+:root{
+    /* bgs */
+    --bg-main: #f7f2f2;
+    --bg-secondary: #e9e9e9;
+    --bg-footer: #d1d0d0;
+
+    /* accent */
+    --accent: #259dff;
+    --alert: #ffcc6e;
+    --delete: #eb5f5f;
+    --confirm: #97e783;
+
+    /* texts */
+    --text-main: #111;
+    --text-muted: #979595;
+    --text-alternative: #ddd;
+    --text-alert: #e07f00;
+    --text-delete: #be0000;
+    --text-confirm: #22a800;
+
+    /* borders */
+    --border-main: #e2e2e2;
+    --border-alert: var(--text-alert);
+    --border-accent: #167acc;
+    --border-delete: var(--text-delete);
+    --border-confirm: var(--text-confirm);
+
+    /* shadows */
+    --shadow-black: 0 5px 14px rgba(0,0,0, 0.3);
+
+    /* none colores */
+    --space: 14px;
+    --radius: 12px;
+}
+
+[data-theme='dark']{
+    --bg-main: #252525;
+    --bg-secondary: #303030;
+    --text-main: #e5e5e5;
+    --text-muted: #636363;
+    --text-alternative: #555;
+    --border-main: #3a3a3a;
+    --bg-footer: #1a1a1a;
+}
+
+@media(prefers-color-scheme: dark){
+    body:not([data-theme]){
+        --bg-main: #1a1a1a;
+        --bg-secondary: #2a2a2a;
+        --text-main: #e5e5e5;
+        --text-muted: #aaaaaa;
+        --text-alternative: #555;
+        --border-main: #3a3a3a;
+        --bg-footer: #1a1a1a;
+    }
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../assets/fonts/Ubuntu.ttf');
+}
