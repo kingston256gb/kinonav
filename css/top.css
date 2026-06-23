@@ -240,6 +240,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 15px;
+    height: 500px;
 }
 #searchResults{
     display: flex;
@@ -250,6 +251,7 @@ main{
     scroll-snap-type: x mandatory; 
     scrollbar-width: thin;
     scrollbar-color: var(--accent) var(--bg-main);
+    gap: 15px;
 }
 #searchResults::-webkit-scrollbar{
     width: 8px;
@@ -282,6 +284,7 @@ main{
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    flex-shrink: 0;
 }
 .seaerch-result_card-poster{
     width: 200px;
@@ -298,12 +301,14 @@ main{
 }
 .search-modal{
     opacity: 0;
+    pointer-events: none;
 }
 .search-modal .search-modal_inner{
     transform: translateY(-20px) scale(0.8);
 }
 .search-modal.active{
     opacity: 1;
+    pointer-events: auto;
 }
 .search-modal.active .search-modal_inner{
     transform: translateY(20px) scale(0.8);
