@@ -58,6 +58,8 @@ function paginationStatsUpdate() {
 }
 
 async function getTopMovies() {
+    topSection.innerHTML = 'Поиск...'
+
     if (topArray.length === 250) {
         renderTop(topArray, currPage)
         return
@@ -118,7 +120,7 @@ async function getTopMovies() {
 }
 
 function renderTop(top, page) {
-    topSection.innerHTML = 'поиск...'
+    topSection.innerHTML = ''
 
     const filteredTop = top.filter(movie => {
         return movie.place <= topLength
@@ -163,6 +165,7 @@ nextPage.addEventListener('click', () => {
 
 
 async function getSearchResults(q) {
+    resultContainer.innerHTML = 'Поиск...'
     try {
         const r = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=${q}&page=1`, {
             method: 'GET',
@@ -186,7 +189,7 @@ async function getSearchResults(q) {
     }
 }
 function renderSearchResults(data) {
-    resultContainer.innerHTML = 'Поиск...'
+    resultContainer.innerHTML = ''
     resultLen.textContent = '0'
 
     data.forEach(movie => {
@@ -196,12 +199,30 @@ function renderSearchResults(data) {
         <img class="seaerch-result_card-poster" src="${movie.posterUrl || movie.posterUrlPreview || ''}">
                     <h3 class="seaerch-result_card-name">${movie.nameRu || movie.nameEn || 'Нет названия'}</h3>
                     <a class="seaerch-result_card-btn btn" href="movie.html?id=${movie.kinopoiskId}">Подробнее</a>`
-
         resultContainer.appendChild(card)
     });
 
     resultLen.textContent = data.length
+
+    reasultModal.classList.add('active')
+    document.body.style.overflow = 'hidden'
+    searchLine.value = ''
 }
+
+reasultModal.addEventListener('click', (e) => {
+    if (e.target === reasultModal) {
+        reasultModal.classList.remove('active')
+        document.body.style.overflow = ''
+    }
+})
+
+searchBtn.addEventListener('click', () => {
+    if (! searchLine.value.trim()) {
+        return
+    }
+
+    getSearchResults(searchLine.value.trim())
+})
 
 topSection.innerHTML = 'Загрузка...'
 paginationStatsUpdate()
